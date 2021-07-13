@@ -1,0 +1,1431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  <title>Yasimera - Το δικό σου app</title>
+  <meta name="twitter:title">
+  <meta name="description">
+  <meta name="twitter:description">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="canonical" href="https://yasimera.com">
+  <link rel="stylesheet" href="css.css">
+  <style type="text/css">
+    body {
+      font-family: 'Roboto', Arial, serif;
+      font-size: 14px;
+      font-weight: 400;
+      --title-scale: 1;
+    }
+
+    @media only screen and (max-width: 750px) {
+      body {
+        --title-scale: 0.7;
+      }
+    }
+
+    .wr {
+      max-width: 1200px;
+      max-width: var(--wr-max);
+    }
+
+    .section:not(.dark),
+    .theme--light,
+    .section:not(.dark) .color-2,
+    .theme--light .color-2 {
+      color: #fff;
+    }
+
+    .section.dark,
+    .theme--dark,
+    .section.dark .color-2,
+    .theme--dark .color-2 {
+      color: rgba(98, 106, 127, 1);
+    }
+
+    .section:not(.dark) .color-1,
+    .theme--light .color-1 {
+      color: #fff;
+    }
+
+    .section.dark .color-1,
+    .theme--dark .color-1 {
+      color: rgba(55, 63, 83, 1);
+    }
+
+    .section:not(.dark) .color-2,
+    .theme--light .color-2 {
+      color: #fff;
+    }
+
+    .section.dark .color-2,
+    .theme--light .color-2 {
+      color: rgba(98, 106, 127, 1);
+    }
+
+    a:not(.btn),
+    .link {
+      color: rgba(255, 255, 255, 1);
+      --link-hover-bg: rgba(255, 255, 255, 0.05);
+      --link-hover: rgb(204, 204, 204);
+    }
+
+    .dark a:not(.btn),
+    .dark .link,
+    .theme--dark .link,
+    .theme--dark a:not(.btn) {
+      color: rgba(55, 63, 83, 1);
+      --link-hover-bg: rgba(55, 63, 83, 0.05);
+      --link-hover: rgb(14, 16, 22);
+    }
+
+    mark {
+      background-color: rgba(248, 231, 28, 1);
+    }
+
+    .dark mark,
+    .theme--dark mark {
+      background-color: rgba(248, 231, 28, 1);
+    }
+
+    .weight-text {
+      font-weight: 400;
+    }
+
+    .weight-text-m {
+      font-weight: 500;
+    }
+
+    .weight-text-h {
+      font-weight: 700;
+    }
+
+    .weight-title {
+      font-weight: 400;
+    }
+
+    .weight-title-m {
+      font-weight: 500;
+    }
+
+    .weight-title-h {
+      font-weight: 300;
+    }
+
+    .font-title {
+      font-family: 'Roboto', Arial, serif;
+    }
+
+    a,
+    .link {
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    a:not(.btn):hover {
+      text-decoration: underline
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=fallback" rel="stylesheet">
+</head>
+
+<body>
+  <div id="header" class="section header" style="--wr-max:1200px">
+    <div class="wr color-1" style="margin-top:10px;margin-bottom:10px">
+      <div id="headerNav"><a id="headerLogo" href="/" class="header__logoImg"><img src="logo.svg" width="144"
+            alt="Logo"></a>
+        <div class="spacer"></div>
+        <div class="headerNav__links"><a href="#features">Δυνατότητες</a><a href="#pricing">Κόστος</a><a
+            href="#faq">Συχνές ερωτήσεις</a></div>
+        <div class="header__navCtas"><a href="#contact" class="btn btn--b btn--primary"
+            style="color:rgba(55,63,83,1);background-color:#fff">Απόκτησέ το<svg width="13" height="12"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M9.6 7H1a1 1 0 1 1 0-2h8.6L7 2.4A1 1 0 0 1 8.4 1l4.3 4.2c.2.3.3.5.3.8 0 .3-.1.5-.3.7L8.4 11A1 1 0 1 1 7 9.5L9.6 7z"
+                fill="rgba(55,63,83,1)"></path>
+            </svg></a></div>
+      </div>
+      <div id="headerMenuButton" class="burger">Menu</div>
+    </div>
+    <div class="headerMenu">
+      <div id="headerDrawerBackdrop" class="headerMenu__backdrop"></div>
+      <div class="headerMenu__wrapper" style="background-color:rgb(243, 112, 60)">
+        <ul class="headerMenu__links">
+          <li><a href="#features" class="drawerLink">Δυνατότητες</a></li>
+          <li><a href="#pricing" class="drawerLink">Κόστος</a></li>
+          <li><a href="#faq" class="drawerLink">Συχνές ερωτήσεις</a></li>
+          <li><a href="#contact" class="drawerLink">Απόκτησέ το<svg width="13" height="12"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M9.557 7H1a1 1 0 1 1 0-2h8.586L7.007 2.421a1 1 0 0 1 1.414-1.414l4.243 4.243c.203.202.3.47.292.736a.997.997 0 0 1-.292.735L8.42 10.964A1 1 0 1 1 7.007 9.55L9.557 7z"
+                  fill="currentColor"></path>
+              </svg></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div id="hero" class="section section--hero section--noPadding section--left"
+    style="background-color:rgb(246,147,108);--pdx-min-height:0px;--wr-max:1200px">
+    <div id="headerSpacer" style="height:50px"></div>
+    <script>!function () { var e, t = document.getElementById("header"), n = document.getElementById("headerSpacer"); t && n && (e = t.getBoundingClientRect().height, n.setAttribute("style", "height:" + e + "px")) }()</script>
+    <div class="ft ft--left ft--twoBg" style="--pdx-pt:0;--pdx-pb:0">
+      <div class="ft__half">
+        <div class="ft__wrapper" style="max-width:570px">
+          <div class="ft__content">
+            <h1 class="hero__title color-1 weight-title-h font-title">Το δικό σου app για τα ραντεβού σου</h1>
+            <p class="hero__subtitle weight-text">Δεν χρειάζεται να ξοδέψεις μια περιουσία για να κλείνουν οι πελάτες
+              σου ραντεβού online</p>
+            <div class="ctas"><a href="#features" class="btn btn--b btn--secondary btn--large" style="color:#fff">Δες
+                πως δουλεύει<svg width="13" height="12" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M9.6 7H1a1 1 0 1 1 0-2h8.6L7 2.4A1 1 0 0 1 8.4 1l4.3 4.2c.2.3.3.5.3.8 0 .3-.1.5-.3.7L8.4 11A1 1 0 1 1 7 9.5L9.6 7z"
+                    fill="#fff"></path>
+                </svg></a></div>
+            <div class="hero__ctaInfo"></div>
+          </div>
+        </div>
+      </div>
+      <div class="ft__half pdx pdxParent--laptop-smartphone"
+        style="background-color:rgba(255, 255, 255, 0);--pdx-maxheight:1">
+        <div class="pdxItem pdxItem--laptop-smartphone"><svg viewBox="0 0 1391 763" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs>
+              <path
+                d="M166 0h1057c18.225 0 33 14.775 33 33v679c0 12.15-9.85 22-22 22H155c-12.15 0-22-9.85-22-22V33c0-18.225 14.775-33 33-33z"
+                id="frameLaptopThinDark-a"></path>
+              <filter x="-.3%" y="-.5%" width="100.6%" height="101%" filterUnits="objectBoundingBox"
+                id="frameLaptopThinDark-b">
+                <feMorphology radius="2" in="SourceAlpha" result="shadowSpreadInner1"></feMorphology>
+                <feGaussianBlur stdDeviation="2.5" in="shadowSpreadInner1" result="shadowBlurInner1"></feGaussianBlur>
+                <feOffset in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+                <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1"
+                  result="shadowInnerInner1"></feComposite>
+                <feColorMatrix values="0 0 0 0 0.125490196 0 0 0 0 0.129411765 0 0 0 0 0.141176471 0 0 0 0.721727491 0"
+                  in="shadowInnerInner1"></feColorMatrix>
+              </filter>
+              <linearGradient x1="50%" y1="100%" x2="50%" y2="0%" id="frameLaptopThinDark-c">
+                <stop stop-color="#282C2F" offset="0%"></stop>
+                <stop stop-color="#181A1C" offset="100%"></stop>
+              </linearGradient>
+            </defs>
+            <g fill="none" fill-rule="evenodd">
+              <g>
+                <use fill="#282C2F" xlink:href="#frameLaptopThinDark-a"></use>
+                <use fill="#000" filter="url(#frameLaptopThinDark-b)" xlink:href="#frameLaptopThinDark-a"></use>
+              </g>
+              <path
+                d="M182 31h1025c10.493 0 19 8.507 19 19v626c0 10.493-8.507 19-19 19H182c-10.493 0-19-8.507-19-19V50c0-10.493 8.507-19 19-19z"
+                fill="#323639"></path>
+              <path
+                d="M303.477 740.075h776.702c195.565 0 299.171 7.333 310.821 22V763H0v-.925c31.315-14.667 132.474-22 303.477-22z"
+                fill="url(#frameLaptopThinDark-c)" transform="matrix(1 0 0 -1 0 1503.075)"></path>
+              <path d="M3 729h1385a3 3 0 0 1 3 3v9H0v-9a3 3 0 0 1 3-3z" fill="#323639"></path>
+            </g>
+          </svg>
+          <div class="pdxContent"><img src="web-app.svg"></div>
+          <div class="pdxItem pdxItem--laptop-smartphone-phone"><svg viewBox="0 0 328 655"
+              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="pdxPhone">
+              <defs>
+                <path
+                  d="M0 45.86C0 20.532 20.532 0 45.86 0h236.28C307.468 0 328 20.532 328 45.86v562.286c0 25.328-20.532 45.86-45.86 45.86H45.86c-25.328 0-45.86-20.532-45.86-45.86V45.86z"
+                  id="framePhoneThinDark-a"></path>
+                <filter x="-1.1%" y="-.5%" width="102.1%" height="101.1%" filterUnits="objectBoundingBox"
+                  id="framePhoneThinDark-b">
+                  <feMorphology radius="2" in="SourceAlpha" result="shadowSpreadInner1"></feMorphology>
+                  <feGaussianBlur stdDeviation="2.5" in="shadowSpreadInner1" result="shadowBlurInner1"></feGaussianBlur>
+                  <feOffset in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+                  <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1"
+                    result="shadowInnerInner1"></feComposite>
+                  <feColorMatrix
+                    values="0 0 0 0 0.125490196 0 0 0 0 0.129411765 0 0 0 0 0.141176471 0 0 0 0.721727491 0"
+                    in="shadowInnerInner1"></feColorMatrix>
+                </filter>
+              </defs>
+              <g fill="none" fill-rule="evenodd">
+                <g>
+                  <use fill="#282C2F" xlink:href="#framePhoneThinDark-a"></use>
+                  <use fill="#000" filter="url(#framePhoneThinDark-b)" xlink:href="#framePhoneThinDark-a"></use>
+                </g>
+                <path
+                  d="M14 47c0-18.778 15.222-34 34-34h232c18.778 0 34 15.222 34 34v560c0 18.778-15.222 34-34 34H48c-18.778 0-34-15.222-34-34V47z"
+                  fill="transparent"></path>
+              </g>
+            </svg>
+            <div class="pdxContent"><img src="app.svg"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="features" class="section section--feature section--noPadding section--bottom dark"
+    style="background-color:rgba(255,255,255,1);--pdx-min-height:0px;--wr-max:1200px">
+    <div class="ft ft--bottom" style="--pdx-pt:0;--pdx-pb:0">
+      <div class="ft__half pdx pdx--noOverflow pdxParent--smartphones pdx--devices-2" style="--pdx-maxheight:1">
+        <div class="pdxItem pdxItem--smartphones"><svg viewBox="0 0 328 655" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" class="pdxPhone">
+            <defs>
+              <path
+                d="M0 45.86C0 20.532 20.532 0 45.86 0h236.28C307.468 0 328 20.532 328 45.86v562.286c0 25.328-20.532 45.86-45.86 45.86H45.86c-25.328 0-45.86-20.532-45.86-45.86V45.86z"
+                id="framePhoneThinDark-a"></path>
+              <filter x="-1.1%" y="-.5%" width="102.1%" height="101.1%" filterUnits="objectBoundingBox"
+                id="framePhoneThinDark-b">
+                <feMorphology radius="2" in="SourceAlpha" result="shadowSpreadInner1"></feMorphology>
+                <feGaussianBlur stdDeviation="2.5" in="shadowSpreadInner1" result="shadowBlurInner1"></feGaussianBlur>
+                <feOffset in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+                <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1"
+                  result="shadowInnerInner1"></feComposite>
+                <feColorMatrix values="0 0 0 0 0.125490196 0 0 0 0 0.129411765 0 0 0 0 0.141176471 0 0 0 0.721727491 0"
+                  in="shadowInnerInner1"></feColorMatrix>
+              </filter>
+            </defs>
+            <g fill="none" fill-rule="evenodd">
+              <g>
+                <use fill="#282C2F" xlink:href="#framePhoneThinDark-a"></use>
+                <use fill="#000" filter="url(#framePhoneThinDark-b)" xlink:href="#framePhoneThinDark-a"></use>
+              </g>
+              <path
+                d="M14 47c0-18.778 15.222-34 34-34h232c18.778 0 34 15.222 34 34v560c0 18.778-15.222 34-34 34H48c-18.778 0-34-15.222-34-34V47z"
+                fill="transparent"></path>
+            </g>
+          </svg>
+          <div class="pdxContent"><img src="web-app.svg"></div>
+          <div class="pdxItem pdxItem--nestedPhone one"><svg viewBox="0 0 328 655" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" class="pdxPhone">
+              <defs>
+                <path
+                  d="M0 45.86C0 20.532 20.532 0 45.86 0h236.28C307.468 0 328 20.532 328 45.86v562.286c0 25.328-20.532 45.86-45.86 45.86H45.86c-25.328 0-45.86-20.532-45.86-45.86V45.86z"
+                  id="framePhoneThinDark-a"></path>
+                <filter x="-1.1%" y="-.5%" width="102.1%" height="101.1%" filterUnits="objectBoundingBox"
+                  id="framePhoneThinDark-b">
+                  <feMorphology radius="2" in="SourceAlpha" result="shadowSpreadInner1"></feMorphology>
+                  <feGaussianBlur stdDeviation="2.5" in="shadowSpreadInner1" result="shadowBlurInner1"></feGaussianBlur>
+                  <feOffset in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+                  <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1"
+                    result="shadowInnerInner1"></feComposite>
+                  <feColorMatrix
+                    values="0 0 0 0 0.125490196 0 0 0 0 0.129411765 0 0 0 0 0.141176471 0 0 0 0.721727491 0"
+                    in="shadowInnerInner1"></feColorMatrix>
+                </filter>
+              </defs>
+              <g fill="none" fill-rule="evenodd">
+                <g>
+                  <use fill="#282C2F" xlink:href="#framePhoneThinDark-a"></use>
+                  <use fill="#000" filter="url(#framePhoneThinDark-b)" xlink:href="#framePhoneThinDark-a"></use>
+                </g>
+                <path
+                  d="M14 47c0-18.778 15.222-34 34-34h232c18.778 0 34 15.222 34 34v560c0 18.778-15.222 34-34 34H48c-18.778 0-34-15.222-34-34V47z"
+                  fill="transparent"></path>
+              </g>
+            </svg>
+            <div class="pdxContent"><img src="app.svg"></div>
+          </div>
+        </div>
+      </div>
+      <div class="ft__half">
+        <div class="ft__wrapper" style="max-width:570px">
+          <div class="ft__content">
+            <h2 class="color-1 weight-title-h font-title section__title bottom noMargin">Ξεχώρισε από τον ανταγωνισμό
+            </h2>
+            <p class="weight-text section__subtitle bottom noMargin">Γιατί είναι άλλο να εμφανίζεσαι μαζί με όλα τα
+              κομμωτήρια της περιοχής και άλλο να έχεις απόλυτο έλεγχο του brand και του πελατολογίου σου</p>
+            <div class="ft__description">
+              <div class="ftChecks col-sec">
+                <div class="ftCheck"><svg width="21px" height="17px" viewBox="0 0 21 17" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <g id="ui-icons" transform="translate(-109.000000, -67.000000)" fill="#22BC66">
+                        <polygon id="check"
+                          points="108.994099 76.4000626 115.987848 83.419577 129.407253 69.9978283 126.587674 67.1592372 115.987848 77.7490936 111.827057 73.5894775">
+                        </polygon>
+                      </g>
+                    </g>
+                  </svg>Για καινούριους και υπάρχοντες πελάτες</div>
+                <div class="ftCheck"><svg width="21px" height="17px" viewBox="0 0 21 17" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <g id="ui-icons" transform="translate(-109.000000, -67.000000)" fill="#22BC66">
+                        <polygon id="check"
+                          points="108.994099 76.4000626 115.987848 83.419577 129.407253 69.9978283 126.587674 67.1592372 115.987848 77.7490936 111.827057 73.5894775">
+                        </polygon>
+                      </g>
+                    </g>
+                  </svg>Ειδοποιήσεις για το επόμενο ραντεβού</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="feature1" class="section section--feature section--noPadding section--left"
+    style="background-color:rgba(246,147,108,1);--pdx-min-height:0px;--wr-max:1200px">
+    <div class="ft ft--left" style="--pdx-pt:0;--pdx-pb:0">
+      <div class="ft__half">
+        <div class="ft__wrapper" style="max-width:570px">
+          <div class="ft__content">
+            <h2 class="color-1 weight-title-h font-title section__title left noMargin">Ένα app όπως το φανταζόσουν</h2>
+            <p class="weight-text section__subtitle left noMargin"></p>
+            <div class="ft__description">
+              <div class="ftPoint">
+                <div class="iconWrapper medium circle" style="width:34px;height:34px"><svg class="backdrop" width="34"
+                    height="34" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="40" cy="42" r="14" transform="translate(-26 -28)" fill="rgba(207, 230, 255, 1.0)"
+                      fill-rule="nonzero"></circle>
+                  </svg><svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="#000" width="34" height="34"
+                    viewBox="0 0 24 24">
+                    <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"></path>
+                  </svg></div>
+                <div class="ftPoint__meta">
+                  <h3 class="ftPoint__title color-1 weight-text-m">Εύκολο στην χρήση</h3>
+                  <div class="ftPoint__description">Απλά πες στους πελάτες σου να κλείσουν το επόμενο ραντεβού από το
+                    κινητό τους</div>
+                </div>
+              </div>
+              <div class="ftPoint">
+                <div class="iconWrapper medium circle" style="width:34px;height:34px"><svg class="backdrop" width="34"
+                    height="34" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="40" cy="42" r="14" transform="translate(-26 -28)" fill="rgba(207, 230, 255, 1.0)"
+                      fill-rule="nonzero"></circle>
+                  </svg><svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="#000" width="34" height="34"
+                    viewBox="0 0 24 24">
+                    <path
+                      d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z">
+                    </path>
+                  </svg></div>
+                <div class="ftPoint__meta">
+                  <h3 class="ftPoint__title color-1 weight-text-m">Πλήρης έλεγχος</h3>
+                  <div class="ftPoint__description">Αποδοχή ραντεβού μόνο από έγκυρους αριθμούς τηλεφώνου<br>Δυνατότητα
+                    χειροκίνητης επιβεβαίωσης ραντεβού</div>
+                </div>
+              </div>
+              <div class="ftPoint">
+                <div class="iconWrapper medium circle" style="width:34px;height:34px"><svg class="backdrop" width="34"
+                    height="34" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="40" cy="42" r="14" transform="translate(-26 -28)" fill="rgba(207, 230, 255, 1.0)"
+                      fill-rule="nonzero"></circle>
+                  </svg><svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="#000" width="34" height="34"
+                    viewBox="0 0 24 24">
+                    <path
+                      d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z">
+                    </path>
+                  </svg></div>
+                <div class="ftPoint__meta">
+                  <h3 class="ftPoint__title color-1 weight-text-m">Πληρωμή στο κατάστημα</h3>
+                  <div class="ftPoint__description">Μην μπλέκεις με online πληρωμές και κάρτες. Οι πληρωμές γίνονται στο
+                    κατάστημα όπως και τώρα.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ft__half pdx pdx--noOverflow pdxParent--smartphones pdx--devices-3" style="--pdx-maxheight:1">
+        <div class="pdxItem pdxItem--smartphones"><svg viewBox="0 0 328 655" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" class="pdxPhone">
+            <defs>
+              <path
+                d="M0 45.86C0 20.532 20.532 0 45.86 0h236.28C307.468 0 328 20.532 328 45.86v562.286c0 25.328-20.532 45.86-45.86 45.86H45.86c-25.328 0-45.86-20.532-45.86-45.86V45.86z"
+                id="framePhoneThinDark-a"></path>
+              <filter x="-1.1%" y="-.5%" width="102.1%" height="101.1%" filterUnits="objectBoundingBox"
+                id="framePhoneThinDark-b">
+                <feMorphology radius="2" in="SourceAlpha" result="shadowSpreadInner1"></feMorphology>
+                <feGaussianBlur stdDeviation="2.5" in="shadowSpreadInner1" result="shadowBlurInner1"></feGaussianBlur>
+                <feOffset in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+                <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1"
+                  result="shadowInnerInner1"></feComposite>
+                <feColorMatrix values="0 0 0 0 0.125490196 0 0 0 0 0.129411765 0 0 0 0 0.141176471 0 0 0 0.721727491 0"
+                  in="shadowInnerInner1"></feColorMatrix>
+              </filter>
+            </defs>
+            <g fill="none" fill-rule="evenodd">
+              <g>
+                <use fill="#282C2F" xlink:href="#framePhoneThinDark-a"></use>
+                <use fill="#000" filter="url(#framePhoneThinDark-b)" xlink:href="#framePhoneThinDark-a"></use>
+              </g>
+              <path
+                d="M14 47c0-18.778 15.222-34 34-34h232c18.778 0 34 15.222 34 34v560c0 18.778-15.222 34-34 34H48c-18.778 0-34-15.222-34-34V47z"
+                fill="transparent"></path>
+            </g>
+          </svg>
+          <div class="pdxContent"><img src="web-app.svg"></div>
+          <div class="pdxItem pdxItem--nestedPhone one"><svg viewBox="0 0 328 655" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" class="pdxPhone">
+              <defs>
+                <path
+                  d="M0 45.86C0 20.532 20.532 0 45.86 0h236.28C307.468 0 328 20.532 328 45.86v562.286c0 25.328-20.532 45.86-45.86 45.86H45.86c-25.328 0-45.86-20.532-45.86-45.86V45.86z"
+                  id="framePhoneThinDark-a"></path>
+                <filter x="-1.1%" y="-.5%" width="102.1%" height="101.1%" filterUnits="objectBoundingBox"
+                  id="framePhoneThinDark-b">
+                  <feMorphology radius="2" in="SourceAlpha" result="shadowSpreadInner1"></feMorphology>
+                  <feGaussianBlur stdDeviation="2.5" in="shadowSpreadInner1" result="shadowBlurInner1"></feGaussianBlur>
+                  <feOffset in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+                  <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1"
+                    result="shadowInnerInner1"></feComposite>
+                  <feColorMatrix
+                    values="0 0 0 0 0.125490196 0 0 0 0 0.129411765 0 0 0 0 0.141176471 0 0 0 0.721727491 0"
+                    in="shadowInnerInner1"></feColorMatrix>
+                </filter>
+              </defs>
+              <g fill="none" fill-rule="evenodd">
+                <g>
+                  <use fill="#282C2F" xlink:href="#framePhoneThinDark-a"></use>
+                  <use fill="#000" filter="url(#framePhoneThinDark-b)" xlink:href="#framePhoneThinDark-a"></use>
+                </g>
+                <path
+                  d="M14 47c0-18.778 15.222-34 34-34h232c18.778 0 34 15.222 34 34v560c0 18.778-15.222 34-34 34H48c-18.778 0-34-15.222-34-34V47z"
+                  fill="transparent"></path>
+              </g>
+            </svg>
+            <div class="pdxContent"><img src="app.svg"></div>
+          </div>
+          <div class="pdxItem pdxItem--nestedPhone two"><svg viewBox="0 0 328 655" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" class="pdxPhone">
+              <defs>
+                <path
+                  d="M0 45.86C0 20.532 20.532 0 45.86 0h236.28C307.468 0 328 20.532 328 45.86v562.286c0 25.328-20.532 45.86-45.86 45.86H45.86c-25.328 0-45.86-20.532-45.86-45.86V45.86z"
+                  id="framePhoneThinDark-a"></path>
+                <filter x="-1.1%" y="-.5%" width="102.1%" height="101.1%" filterUnits="objectBoundingBox"
+                  id="framePhoneThinDark-b">
+                  <feMorphology radius="2" in="SourceAlpha" result="shadowSpreadInner1"></feMorphology>
+                  <feGaussianBlur stdDeviation="2.5" in="shadowSpreadInner1" result="shadowBlurInner1"></feGaussianBlur>
+                  <feOffset in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+                  <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1"
+                    result="shadowInnerInner1"></feComposite>
+                  <feColorMatrix
+                    values="0 0 0 0 0.125490196 0 0 0 0 0.129411765 0 0 0 0 0.141176471 0 0 0 0.721727491 0"
+                    in="shadowInnerInner1"></feColorMatrix>
+                </filter>
+              </defs>
+              <g fill="none" fill-rule="evenodd">
+                <g>
+                  <use fill="#282C2F" xlink:href="#framePhoneThinDark-a"></use>
+                  <use fill="#000" filter="url(#framePhoneThinDark-b)" xlink:href="#framePhoneThinDark-a"></use>
+                </g>
+                <path
+                  d="M14 47c0-18.778 15.222-34 34-34h232c18.778 0 34 15.222 34 34v560c0 18.778-15.222 34-34 34H48c-18.778 0-34-15.222-34-34V47z"
+                  fill="transparent"></path>
+              </g>
+            </svg>
+            <div class="pdxContent"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="feature2" class="section section--feature section--noPadding section--right dark"
+    style="background-color:rgba(255,255,255,1);--pdx-min-height:0px;--wr-max:1200px">
+    <div class="ft ft--right" style="--pdx-pt:0;--pdx-pb:0">
+      <div class="ft__half pdx pdxParent--laptop-smartphone" style="--pdx-maxheight:1">
+        <div class="pdxItem pdxItem--laptop-smartphone"><svg viewBox="0 0 1391 762" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs>
+              <linearGradient x1="50%" y1="100%" x2="50%" y2="0%" id="frameLaptopThin-a">
+                <stop stop-color="#FFF" offset="0%"></stop>
+                <stop stop-color="#F1F2F4" offset="100%"></stop>
+              </linearGradient>
+              <path
+                d="M166 0h1057c18.225 0 33 14.775 33 33v679c0 12.15-9.85 22-22 22H155c-12.15 0-22-9.85-22-22V33c0-18.225 14.775-33 33-33z"
+                id="frameLaptopThin-b"></path>
+              <filter x="-.8%" y="-1.2%" width="101.5%" height="102.3%" filterUnits="objectBoundingBox"
+                id="frameLaptopThin-c">
+                <feGaussianBlur stdDeviation="4" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+                <feOffset dy="-9" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+                <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1"
+                  result="shadowInnerInner1"></feComposite>
+                <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.0248033217 0" in="shadowInnerInner1"
+                  result="shadowMatrixInner1"></feColorMatrix>
+                <feGaussianBlur stdDeviation="1.5" in="SourceAlpha" result="shadowBlurInner2"></feGaussianBlur>
+                <feOffset in="shadowBlurInner2" result="shadowOffsetInner2"></feOffset>
+                <feComposite in="shadowOffsetInner2" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1"
+                  result="shadowInnerInner2"></feComposite>
+                <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.136636801 0" in="shadowInnerInner2"
+                  result="shadowMatrixInner2"></feColorMatrix>
+                <feMerge>
+                  <feMergeNode in="shadowMatrixInner1"></feMergeNode>
+                  <feMergeNode in="shadowMatrixInner2"></feMergeNode>
+                </feMerge>
+              </filter>
+              <path
+                d="M303.477 740.075h776.702c195.565 0 299.171 7.333 310.821 22V763H0v-.925c31.315-14.667 132.474-22 303.477-22z"
+                id="frameLaptopThin-d"></path>
+              <filter x="-1.1%" y="-68.2%" width="102.2%" height="236.4%" filterUnits="objectBoundingBox"
+                id="frameLaptopThin-e">
+                <feGaussianBlur stdDeviation="9" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+                <feOffset dy="12" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+                <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1"
+                  result="shadowInnerInner1"></feComposite>
+                <feColorMatrix values="0 0 0 0 0.88627451 0 0 0 0 0.888083393 0 0 0 0 0.890196078 0 0 0 1 0"
+                  in="shadowInnerInner1"></feColorMatrix>
+              </filter>
+            </defs>
+            <g fill="none" fill-rule="evenodd">
+              <g>
+                <use fill="url(#frameLaptopThin-a)" xlink:href="#frameLaptopThin-b"></use>
+                <use fill="#000" filter="url(#frameLaptopThin-c)" xlink:href="#frameLaptopThin-b"></use>
+              </g>
+              <path
+                d="M182 33h1025c10.493 0 19 8.507 19 19v626c0 10.493-8.507 19-19 19H182c-10.493 0-19-8.507-19-19V52c0-10.493 8.507-19 19-19z"
+                fill="transparent"></path>
+              <path d="M3 729h1385a3 3 0 0 1 3 3v9H0v-9a3 3 0 0 1 3-3z" fill="#FFF"></path>
+              <g transform="matrix(1 0 0 -1 0 1502)">
+                <use fill="#FFF" xlink:href="#frameLaptopThin-d"></use>
+                <use fill="#000" filter="url(#frameLaptopThin-e)" xlink:href="#frameLaptopThin-d"></use>
+              </g>
+            </g>
+          </svg>
+          <div class="pdxContent"><img src="web-app.svg"></div>
+          <div class="pdxItem pdxItem--laptop-smartphone-phone"><svg viewBox="0 0 328 655"
+              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="pdxPhone">
+              <defs>
+                <path
+                  d="M0 45.86C0 20.532 20.532 0 45.86 0h236.28C307.468 0 328 20.532 328 45.86v562.286c0 25.328-20.532 45.86-45.86 45.86H45.86c-25.328 0-45.86-20.532-45.86-45.86V45.86z"
+                  id="framePhoneThin-a"></path>
+                <filter x="-.8%" y="-.4%" width="101.5%" height="100.8%" filterUnits="objectBoundingBox"
+                  id="framePhoneThin-b">
+                  <feGaussianBlur stdDeviation="2.5" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+                  <feOffset in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+                  <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1"
+                    result="shadowInnerInner1"></feComposite>
+                  <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.192881337 0" in="shadowInnerInner1">
+                  </feColorMatrix>
+                </filter>
+              </defs>
+              <g fill="none" fill-rule="evenodd">
+                <g>
+                  <use fill="#FFF" xlink:href="#framePhoneThin-a"></use>
+                  <use fill="#000" filter="url(#framePhoneThin-b)" xlink:href="#framePhoneThin-a"></use>
+                </g>
+                <path
+                  d="M14 47c0-18.778 15.222-34 34-34h232c18.778 0 34 15.222 34 34v560c0 18.778-15.222 34-34 34H48c-18.778 0-34-15.222-34-34V47z"
+                  fill="transparent" fill-rule="nonzero"></path>
+              </g>
+            </svg>
+            <div class="pdxContent"><img src="app.svg"></div>
+          </div>
+        </div>
+      </div>
+      <div class="ft__half">
+        <div class="ft__wrapper" style="max-width:570px">
+          <div class="ft__content">
+            <h2 class="color-1 weight-title-h font-title section__title right noMargin">Απλή διαχείρηση</h2>
+            <p class="weight-text section__subtitle right noMargin"></p>
+            <div class="ft__description">
+              <div class="ftPoint">
+                <div class="iconWrapper medium circle" style="width:34px;height:34px"><svg class="backdrop" width="34"
+                    height="34" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="40" cy="42" r="14" transform="translate(-26 -28)" fill="rgba(207, 230, 255, 1.0)"
+                      fill-rule="nonzero"></circle>
+                  </svg><svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="#000" width="34" height="34"
+                    viewBox="0 0 24 24">
+                    <path
+                      d="M21 2H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h7v2H8v2h8v-2h-2v-2h7c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H3V4h18v12z">
+                    </path>
+                  </svg></div>
+                <div class="ftPoint__meta">
+                  <h3 class="ftPoint__title color-1 weight-text-m">Όλα σου τα ραντεβού σε ένα σημείο</h3>
+                  <div class="ftPoint__description">Εννοείται ότι μπορείς να προσθέσεις ή να αλλάξεις τα ραντεβού και
+                    μόνος σου.<br>Πλήρης πρόσβαση στο πελατολόγιο και το ιστορικό κάθε πελάτη</div>
+                </div>
+              </div>
+              <div class="ftPoint">
+                <div class="iconWrapper medium circle" style="width:34px;height:34px"><svg class="backdrop" width="34"
+                    height="34" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="40" cy="42" r="14" transform="translate(-26 -28)" fill="rgba(207, 230, 255, 1.0)"
+                      fill-rule="nonzero"></circle>
+                  </svg><svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="#000" width="34" height="34"
+                    viewBox="0 0 24 24">
+                    <path
+                      d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z">
+                    </path>
+                  </svg></div>
+                <div class="ftPoint__meta">
+                  <h3 class="ftPoint__title color-1 weight-text-m">Ωράρια και υπάλληλοι</h3>
+                  <div class="ftPoint__description">Πλήρης υποστήριξη για πολλαπλούς υπαλλήλους, διαφορετικά ωράρια,
+                    αργείες</div>
+                </div>
+              </div>
+              <div class="ftPoint">
+                <div class="iconWrapper medium circle" style="width:34px;height:34px"><svg class="backdrop" width="34"
+                    height="34" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="40" cy="42" r="14" transform="translate(-26 -28)" fill="rgba(207, 230, 255, 1.0)"
+                      fill-rule="nonzero"></circle>
+                  </svg><svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="#000" width="34" height="34"
+                    viewBox="0 0 24 24">
+                    <path
+                      d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z">
+                    </path>
+                  </svg></div>
+                <div class="ftPoint__meta">
+                  <h3 class="ftPoint__title color-1 weight-text-m">Πολλαπλοί χρήστες</h3>
+                  <div class="ftPoint__description">Κάθε υπάλληλος μπορεί να έχει περιορισμένη πρόσβαση στα ραντεβού και
+                    το πελατολόγιο</div>
+                </div>
+              </div>
+              <div class="ftPoint">
+                <div class="iconWrapper medium circle" style="width:34px;height:34px"><svg class="backdrop" width="34"
+                    height="34" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="40" cy="42" r="14" transform="translate(-26 -28)" fill="rgba(207, 230, 255, 1.0)"
+                      fill-rule="nonzero"></circle>
+                  </svg><svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="#000" width="34" height="34"
+                    viewBox="0 0 24 24">
+                    <path
+                      d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z">
+                    </path>
+                  </svg></div>
+                <div class="ftPoint__meta">
+                  <h3 class="ftPoint__title color-1 weight-text-m">Συγχρονισμός με Google Calendar</h3>
+                  <div class="ftPoint__description">Όλα τα ραντεβού είναι διαθέσιμα στο Ημερολόγιο του κινητού σου ή/και
+                    των χρηστών σου</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="feature3" class="section section--feature section--noPadding section--bottom"
+    style="background-color:rgba(246,147,108,1);--pdx-min-height:0px;--wr-max:1200px">
+    <div class="ft ft--bottom" style="--pdx-pt:0;--pdx-pb:0">
+      <div class="ft__half pdx pdxParent--laptop-smartphone" style="--pdx-maxheight:1">
+        <div class="pdxItem pdxItem--laptop-smartphone"><svg viewBox="0 0 1391 762" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs>
+              <linearGradient x1="50%" y1="100%" x2="50%" y2="0%" id="frameLaptopThin-a">
+                <stop stop-color="#FFF" offset="0%"></stop>
+                <stop stop-color="#F1F2F4" offset="100%"></stop>
+              </linearGradient>
+              <path
+                d="M166 0h1057c18.225 0 33 14.775 33 33v679c0 12.15-9.85 22-22 22H155c-12.15 0-22-9.85-22-22V33c0-18.225 14.775-33 33-33z"
+                id="frameLaptopThin-b"></path>
+              <filter x="-.8%" y="-1.2%" width="101.5%" height="102.3%" filterUnits="objectBoundingBox"
+                id="frameLaptopThin-c">
+                <feGaussianBlur stdDeviation="4" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+                <feOffset dy="-9" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+                <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1"
+                  result="shadowInnerInner1"></feComposite>
+                <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.0248033217 0" in="shadowInnerInner1"
+                  result="shadowMatrixInner1"></feColorMatrix>
+                <feGaussianBlur stdDeviation="1.5" in="SourceAlpha" result="shadowBlurInner2"></feGaussianBlur>
+                <feOffset in="shadowBlurInner2" result="shadowOffsetInner2"></feOffset>
+                <feComposite in="shadowOffsetInner2" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1"
+                  result="shadowInnerInner2"></feComposite>
+                <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.136636801 0" in="shadowInnerInner2"
+                  result="shadowMatrixInner2"></feColorMatrix>
+                <feMerge>
+                  <feMergeNode in="shadowMatrixInner1"></feMergeNode>
+                  <feMergeNode in="shadowMatrixInner2"></feMergeNode>
+                </feMerge>
+              </filter>
+              <path
+                d="M303.477 740.075h776.702c195.565 0 299.171 7.333 310.821 22V763H0v-.925c31.315-14.667 132.474-22 303.477-22z"
+                id="frameLaptopThin-d"></path>
+              <filter x="-1.1%" y="-68.2%" width="102.2%" height="236.4%" filterUnits="objectBoundingBox"
+                id="frameLaptopThin-e">
+                <feGaussianBlur stdDeviation="9" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+                <feOffset dy="12" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+                <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1"
+                  result="shadowInnerInner1"></feComposite>
+                <feColorMatrix values="0 0 0 0 0.88627451 0 0 0 0 0.888083393 0 0 0 0 0.890196078 0 0 0 1 0"
+                  in="shadowInnerInner1"></feColorMatrix>
+              </filter>
+            </defs>
+            <g fill="none" fill-rule="evenodd">
+              <g>
+                <use fill="url(#frameLaptopThin-a)" xlink:href="#frameLaptopThin-b"></use>
+                <use fill="#000" filter="url(#frameLaptopThin-c)" xlink:href="#frameLaptopThin-b"></use>
+              </g>
+              <path
+                d="M182 33h1025c10.493 0 19 8.507 19 19v626c0 10.493-8.507 19-19 19H182c-10.493 0-19-8.507-19-19V52c0-10.493 8.507-19 19-19z"
+                fill="transparent"></path>
+              <path d="M3 729h1385a3 3 0 0 1 3 3v9H0v-9a3 3 0 0 1 3-3z" fill="#FFF"></path>
+              <g transform="matrix(1 0 0 -1 0 1502)">
+                <use fill="#FFF" xlink:href="#frameLaptopThin-d"></use>
+                <use fill="#000" filter="url(#frameLaptopThin-e)" xlink:href="#frameLaptopThin-d"></use>
+              </g>
+            </g>
+          </svg>
+          <div class="pdxContent"><img src="web-app.svg"></div>
+          <div class="pdxItem pdxItem--laptop-smartphone-phone"><svg viewBox="0 0 328 655"
+              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="pdxPhone">
+              <defs>
+                <path
+                  d="M0 45.86C0 20.532 20.532 0 45.86 0h236.28C307.468 0 328 20.532 328 45.86v562.286c0 25.328-20.532 45.86-45.86 45.86H45.86c-25.328 0-45.86-20.532-45.86-45.86V45.86z"
+                  id="framePhoneThin-a"></path>
+                <filter x="-.8%" y="-.4%" width="101.5%" height="100.8%" filterUnits="objectBoundingBox"
+                  id="framePhoneThin-b">
+                  <feGaussianBlur stdDeviation="2.5" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+                  <feOffset in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+                  <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1"
+                    result="shadowInnerInner1"></feComposite>
+                  <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.192881337 0" in="shadowInnerInner1">
+                  </feColorMatrix>
+                </filter>
+              </defs>
+              <g fill="none" fill-rule="evenodd">
+                <g>
+                  <use fill="#FFF" xlink:href="#framePhoneThin-a"></use>
+                  <use fill="#000" filter="url(#framePhoneThin-b)" xlink:href="#framePhoneThin-a"></use>
+                </g>
+                <path
+                  d="M14 47c0-18.778 15.222-34 34-34h232c18.778 0 34 15.222 34 34v560c0 18.778-15.222 34-34 34H48c-18.778 0-34-15.222-34-34V47z"
+                  fill="transparent" fill-rule="nonzero"></path>
+              </g>
+            </svg>
+            <div class="pdxContent"><img src="app.svg"></div>
+          </div>
+        </div>
+      </div>
+      <div class="ft__half">
+        <div class="ft__wrapper" style="max-width:570px">
+          <div class="ft__content">
+            <h2 class="color-1 weight-title-h font-title section__title bottom noMargin">Αναλυτικά στατιστικά</h2>
+            <p class="weight-text section__subtitle bottom noMargin">Δες με μία ματιά τα ραντεβού σου και σύγκρινε με
+              προηγούμενες περιόδους.<br>Πάρε τον έλεγχο της επιχειρησής σου</p>
+            <div class="ft__description"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="pricing" class="section section--grid section--center dark"
+    style="background-color:rgba(255,255,255,1);padding-bottom:60px;padding-top:60px;--pdx-min-height:0px;--wr-max:1200px">
+    <div class="wr">
+      <h2 class="color-1 weight-title-h font-title section__title center">Τιμολόγηση στα μέτρα σου</h2>
+      <p class="weight-text section__subtitle center">Χρέωση ανά ραντεβού μέχρι € 35 το μήνα / κουρέα</p>
+      <div class="grid grid--center">
+        <div class="gridItem">
+          <div class="icon small" style="height:24px;width:24px"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+              height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" class="icon">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+              </polygon>
+            </svg></div>
+          <h3 class="gridItem__title color-1 weight-text-m">Από το app</h3>
+          <div class="gridItem__description">
+            <p>€ 0.50 ανά ραντεβού</p>
+          </div>
+        </div>
+        <div class="gridItem">
+          <div class="icon small" style="height:24px;width:24px"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+              height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" class="icon">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+              </polygon>
+            </svg></div>
+          <h3 class="gridItem__title color-1 weight-text-m">Από το site</h3>
+          <div class="gridItem__description">
+            <p>€ 0.50 ανά ραντεβού</p>
+          </div>
+        </div>
+        <div class="gridItem">
+          <div class="icon small" style="height:24px;width:24px"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+              height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" class="icon">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+              </polygon>
+            </svg></div>
+          <h3 class="gridItem__title color-1 weight-text-m">Χειροκίνητα</h3>
+          <div class="gridItem__description">
+            <p>€ 0.10 ανά ραντεβού</p>
+          </div>
+        </div>
+        <div class="gridItem">
+          <div class="icon small" style="height:24px;width:24px"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+              height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" class="icon">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+              </polygon>
+            </svg></div>
+          <h3 class="gridItem__title color-1 weight-text-m">Ελάχιστη χρέωση</h3>
+          <div class="gridItem__description">
+            <p>€ 5 το μήνα</p>
+          </div>
+        </div>
+        <div class="gridItem">
+          <div class="icon small" style="height:24px;width:24px"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+              height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" class="icon">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+              </polygon>
+            </svg></div>
+          <h3 class="gridItem__title color-1 weight-text-m">Μέγιστη χρέωση</h3>
+          <div class="gridItem__description">
+            <p>€ 35 το μήνα ανά κουρέα</p>
+          </div>
+        </div>
+        <div class="gridItem">
+          <div class="icon small" style="height:24px;width:24px"></div>
+          <h3 class="gridItem__title color-1 weight-text-m"></h3>
+          <div class="gridItem__description"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="form" class="section section--grid section--center"
+    style="background-color:rgba(246,147,108,1);padding-bottom:60px;padding-top:60px;--pdx-min-height:0px;--wr-max:500px">
+    <div class="wr">
+      <h2 class="color-1 weight-title-h font-title section__title center">Επικοινωνία</h2>
+      <p class="weight-text section__subtitle center">Συμπληρώστε τα στοιχεία σας και θα επικοινωνήσουμε μαζί σας</p>
+      <div style="max-width:400px;margin:0 auto">
+        <form id="cf-ffqeh9bn506" class="form one-col" style="--cf-bg:#fafafa;--cf-color:#000;--cf-placeholder:#bbb"
+          data-siteid="yejzvimmpvlw" data-formid="form_TwLKQqgsLdpcHFqz" data-action="{&quot;action&quot;:null}">
+          <div class="formRow">
+            <div class="cf-field" data-label="Το όνομά σας" data-required="true" data-field="text"><label>Το όνομά
+                σας<span style="color:darkred"> *</span></label><input type="text" placeholder="John"></div>
+          </div>
+          <div class="formRow">
+            <div class="cf-field" data-label="Email" data-required="true" data-field="email"><label>Email<span
+                  style="color:darkred"> *</span></label><input type="email" placeholder="your@email.com"></div>
+          </div>
+          <div class="formRow">
+            <div class="cf-field" data-label="ΑΦΜ επιχείρησης" data-required="true" data-field="text"><label>ΑΦΜ
+                επιχείρησης<span style="color:darkred"> *</span></label><input type="text" placeholder="12345678"></div>
+          </div>
+          <div class="formRow">
+            <div class="cf-field" data-label="Όνομα επιχείρησης" data-required="true" data-field="text"><label>Όνομα
+                επιχείρησης<span style="color:darkred"> *</span></label><input type="text" placeholder="Rusty cut">
+            </div>
+          </div>
+          <div class="formRow">
+            <div class="cf-field" data-label="Διεύθυνση επιχείρησης" data-required="true" data-field="text">
+              <label>Διεύθυνση επιχείρησης<span style="color:darkred"> *</span></label><input type="text">
+            </div>
+          </div>
+          <div id="formCaptcha_ffqeh9bn506" class="formCaptcha">
+            <div class="formRow">
+              <div class="cf-field ignore"><label>Security Question</label>
+                <div id="captchaImage_ffqeh9bn506"></div>
+              </div>
+            </div>
+            <div class="formRow">
+              <div class="cf-field ignore" data-required="true"><label>Enter the numbers from the image
+                  above</label><input type="text" id="captchaSolution_ffqeh9bn506" placeholder="123456"
+                  class="captchaAnswer"></div>
+            </div>
+          </div>
+          <div class="formError"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12" y2="16"></line>
+            </svg>
+            <div class="content"><span>Error</span>
+              <div id="errorMessage"></div>
+            </div>
+          </div><button id="cf-cta-ffqeh9bn506" class="btn btn--b btn--primary btn--large"
+            style="color:rgba(55,63,83,1);background-color:#fff">Με ενδιαφέρει</button>
+        </form>
+      </div>
+    </div>
+    <script>; (function () {
+          var $form = document.getElementById('cf-ffqeh9bn506')
+          var $error = $form.getElementsByClassName('formError')[0]
+          var $btn = document.getElementById('cf-cta-ffqeh9bn506')
+          var $fields = $form.querySelectorAll('.cf-field:not(.ignore)')
+          var $fileUploadFields = $form.querySelectorAll('.cf-file-field')
+
+          var $captcha = document.getElementById('formCaptcha_ffqeh9bn506')
+          var $captchaSolution = document.getElementById('captchaSolution_ffqeh9bn506')
+          var $captchaImage = document.getElementById('captchaImage_ffqeh9bn506')
+
+          let dataFileName = 'data-fileName'
+          let dataFileId = 'data-fileId'
+
+          let submitAfterUpload = false
+          let uploadCounter = 0
+          let isSubmitting = false
+
+          function bindForm() {
+            $form.addEventListener('submit', handleSubmit)
+            $btn.addEventListener('click', handleSubmit)
+
+            bindUploadFields()
+          }
+
+          function bindUploadFields() {
+            Array.prototype.forEach.call($fileUploadFields, function ($field) {
+              let button = $field.querySelector('button')
+              let input = $field.querySelector('input')
+
+              if (button && input) {
+                button.addEventListener('click', e => handleUploadClick(e, input))
+                input.addEventListener('change', handleUploadChange)
+              }
+            })
+          }
+
+          function getRadioValue(el) {
+            var checked = el.querySelector('input:checked')
+            return checked ? checked.value : null
+          }
+
+          function getCheckboxValue(el) {
+            var $checkBoxes = el.getElementsByTagName('input')
+            var values = []
+
+            Array.prototype.forEach.call($checkBoxes, function ($box, i) {
+              if ($box.checked) {
+                values.push($box.value)
+              }
+            })
+
+            return values
+          }
+
+          function getSelectValue(el) {
+            return el.getElementsByTagName('select')[0].value
+          }
+
+          function getValue(el) {
+            // { label: 'None', value: 'none' },
+            // { label: 'Text Field', value: 'text' },
+            // { label: 'Email', value: 'email' },
+            // { label: 'Phone Number', value: 'phone' },
+            // { label: 'URL', value: 'url' },
+            // { label: 'Number', value: 'number' },
+            // { label: 'Text Area', value: 'textarea' },
+            // { label: 'Checkboxes', value: 'checkbox' },
+            // { label: 'Radio Buttons', value: 'radio' },
+            // { label: 'Select', value: 'select' }
+            var fieldType = el.getAttribute('data-field')
+
+            switch (fieldType) {
+              case 'file':
+                // values are obtained by different data tags
+                // we return the id for validation purposes
+                let fileField = el.querySelector('.cf-file-field')
+                return fileField.getAttribute(dataFileName)
+              case 'radio':
+                return getRadioValue(el)
+              case 'checkbox':
+                return getCheckboxValue(el)
+              case 'select':
+                return getSelectValue(el)
+              case 'textarea':
+                return el.getElementsByTagName('textarea')[0].value
+              default:
+                return el.getElementsByTagName('input')[0].value
+            }
+          }
+
+          function handleUploadClick(e, input) {
+            e.preventDefault()
+            input.click()
+          }
+
+          function handleUploadChange(e) {
+            e.preventDefault()
+
+            let target = e.target
+
+            if (!target.files || target.files.length === 0) {
+              console.error('no files selected')
+              return
+            }
+
+            // we only support one file per field
+            let file = target.files[0]
+
+            const preData = {
+              contentType: file.type,
+              contentLength: file.size
+            }
+
+            let request = new XMLHttpRequest()
+            let formId = $form.getAttribute('data-formid')
+
+            request.open('POST', window.location.origin + '/api/forms/' + formId + '/file-upload-url', true)
+            request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8')
+            request.send(JSON.stringify(preData))
+
+            request.onload = function () {
+              let res = JSON.parse(request.responseText)
+              if (this.status >= 200 && this.status < 400) {
+                clearErrorMessage()
+                uploadFile(target, file, res.fileId, res.url)
+              } else {
+                clearFileField(target.parentElement)
+                showError(['File issue: ' + res.error])
+                console.log(JSON.stringify(JSON.parse(request.responseText)))
+              }
+            }
+          }
+
+          // uploadFile uses the presigned url generated by API to upload to S3
+          // el is the HTML element that is used to display the file name if upload was successful
+          function uploadFile(el, file, fileId, url) {
+            let uploadFileReq = new XMLHttpRequest()
+            uploadFileReq.open('PUT', url, true)
+            uploadFileReq.send(file)
+
+            // flag that there is a file being uploaded
+            uploadCounter++
+
+            uploadFileReq.onload = function () {
+              if (this.status >= 200 && this.status < 400) {
+                el.parentElement.setAttribute(dataFileName, file.name)
+                el.parentElement.setAttribute(dataFileId, fileId)
+                el.parentElement.querySelector('span').innerHTML = file.name
+                clearErrorMessage()
+              } else {
+                showError(['There was an error when uploading your file'])
+                clearFileField(el.parentElement)
+                console.log(JSON.stringify(JSON.parse(uploadFileReq.responseText)))
+              }
+
+              // decrease counter if file is uploaded
+              uploadCounter--
+
+              if (uploadCounter === 0 && submitAfterUpload) {
+                submitAfterUpload = false
+                handleSubmit()
+              }
+            }
+          }
+
+          function handleSubmit(e) {
+            // when the submit function is triggered by a button, we need to prevent the default action.
+            // However we might also trigger this function after file uploads complete, in which case we won't have an e (event) to prevent
+            if (e != null) {
+              e.preventDefault()
+            }
+
+            // Blocks submission if validation fails or if there is a submission being processed
+            if (!validateData(data) || isSubmitting) {
+              return
+            }
+
+            var fieldSet = {}
+
+            Array.prototype.forEach.call($fields, function ($field, i) {
+              var value = getValue($field)
+              var name = $field.getAttribute('data-label')
+              let type = $field.getAttribute('data-field')
+
+              if (type === 'file') {
+                let fileField = $field.querySelector('.cf-file-field')
+                let fileName = fileField.getAttribute(dataFileName)
+                let fileId = fileField.getAttribute(dataFileId)
+
+                fieldSet[name] = { type: 'file', fileName: fileName, fileId: fileId }
+              } else {
+                fieldSet[name] = value
+              }
+            })
+
+            var data = {
+              path: window.location.pathname,
+              formId: $form.getAttribute('data-formid'),
+              siteId: $form.getAttribute('data-siteid'),
+              cs: $captchaSolution.value,
+              cid: $captchaSolution.getAttribute('data-cid'),
+              data: fieldSet
+            }
+
+            $btn.classList.add('btn--loading')
+
+            // make sure it doesn't send the request if there is a file being uploaded
+            if (uploadCounter > 0) {
+              submitAfterUpload = true
+              return
+            }
+
+            sendData(data)
+          }
+
+          function showCaptcha(data) {
+            var el = document.createElement('img')
+            el.setAttribute('src', data.captcha)
+            $captchaImage.innerHTML = ''
+            $captchaImage.appendChild(el)
+            $captcha.classList.add('isVisible')
+            $captchaSolution.setAttribute('data-cid', data.captchaId)
+          }
+
+          function showError(errors) {
+            $error.querySelector('#errorMessage').innerHTML = errors
+            $error.classList.add('isVisible')
+          }
+
+          function clearErrorMessage() {
+            $error.querySelector('#errorMessage').innerHTML = ''
+            $error.classList.remove('isVisible')
+          }
+
+          function handleAction(data) {
+            var action = $form.getAttribute('data-action')
+            if (action) {
+              var parsed = JSON.parse(action)
+
+              if (parsed.action === 'redirect') {
+                var params = ''
+                if (parsed.includeUrlParams) {
+                  if (parsed.redirectUrl.indexOf('?') === -1) {
+                    params = '?'
+                  } else {
+                    params = '&'
+                  }
+                  params += url = Object.keys(data.data)
+                    .map(function (k) {
+                      if (data.data[k]) {
+                        return encodeURIComponent(k) + '=' + encodeURIComponent(data.data[k])
+                      } else {
+                        return null
+                      }
+                    })
+                    .filter(function (item) {
+                      return !!item
+                    })
+                    .join('&')
+                }
+                window.location = parsed.redirectUrl + params
+              }
+            }
+          }
+
+          function sendData(data) {
+            // Lock the submission trigger
+            isSubmitting = true
+
+            var request = new XMLHttpRequest()
+            request.open('POST', window.location.origin + '/api/submit-form', true)
+            request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8')
+            request.send(JSON.stringify(data))
+
+            request.onload = function () {
+              $btn.classList.remove('btn--loading')
+
+              // Let the user submit another response or re-submit if fails
+              isSubmitting = false
+
+              if (this.status >= 200 && this.status < 400) {
+                // success handling
+                var res = JSON.parse(request.responseText)
+
+                if (res.success) {
+                  clearData()
+                  $btn.classList.add('btn--success')
+                  setTimeout(function () {
+                    $btn.classList.remove('btn--success')
+                  }, 2000)
+                  handleAction(data)
+                  sendEvent(data.siteId)
+                  callCustomCode(data)
+                } else if (res.captcha) {
+                  showCaptcha(res)
+                }
+              } else {
+                console.log('error')
+              }
+            }
+
+            request.onerror = function () {
+              $btn.classList.remove('btn--loading')
+              showError(['A network error occured. Please make sure you are connected to the internet.'])
+            }
+          }
+
+          function sendEvent(siteId) {
+            var request = new XMLHttpRequest()
+            request.open('POST', '/api/event', true)
+            request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8')
+            request.send(
+              JSON.stringify({
+                siteId: siteId,
+                category: 'customForm',
+                name: 'Custom Form Submission',
+                data: {
+                  page: window.location.pathname
+                }
+              })
+            )
+          }
+
+          function clearData() {
+            // clear other data
+            $form.reset()
+
+            // reset captcha data
+            $captchaSolution.value = ''
+            $captchaSolution.setAttribute('data-cid', '')
+            $captcha.classList.remove('isVisible')
+            $error.classList.remove('isVisible')
+
+            // Clean all file upload fields
+            Array.prototype.forEach.call($fileUploadFields, function ($field) {
+              clearFileField($field)
+            })
+          }
+
+          function clearFileField(target) {
+            target.setAttribute(dataFileName, '')
+            target.setAttribute(dataFileId, '')
+            target.querySelector('span').innerHTML = ''
+          }
+
+          function validateData() {
+            clearErrorMessage()
+
+            var err = []
+
+            Array.prototype.forEach.call($fields, function ($field, i) {
+              var isRequired = $field.getAttribute('data-required') === 'true'
+              var emailRegex = new RegExp('^.+@.+..+$')
+
+              var value = getValue($field)
+
+              $field.classList.remove('error') // always remove because it will be checked again
+
+              if (value && $field.getAttribute('data-field') === 'email' && !emailRegex.test(value)) {
+                err.push('Invalid email: ' + $field.getAttribute('data-label'))
+                $field.classList.add('error')
+              }
+
+              if (isRequired && (!value || (Array.isArray(value) && !value.length))) {
+                err.push('Missing required field: ' + $field.getAttribute('data-label'))
+                $field.classList.add('error')
+              }
+
+              if (err.length > 0) {
+                const length = err.length
+                let errMsg = ''
+
+                for (i = 0; i < length; i++) {
+                  if (err.length > 1) {
+                    errMsg += `- `
+                  }
+                  errMsg += err[i] + '<br>'
+                }
+
+                showError(errMsg)
+              }
+            })
+
+            return Array.isArray(err) && err.length === 0
+          }
+          bindForm()
+
+          // this function at the very end in case of invalid code
+          function callCustomCode(data) {
+            // custom_code_placeholder
+          }
+        })()
+    </script>
+  </div>
+  <div id="faq" class="section section--faq section--center dark"
+    style="background-color:rgba(255,255,255,1);padding-bottom:60px;padding-top:60px;--pdx-min-height:0px;--wr-max:1200px">
+    <div class="wr">
+      <h2 class="color-1 weight-title-h font-title section__title center standalone">Συχνές ερωτήσεις</h2>
+      <div class="faq">
+        <div class="faqItem closed">
+          <h3 class="color weight-text-h faqItem__question">Είναι πραγματικά δική μου η εφαρμογή</h3>
+          <div class="faqItem__answer">Ναι, έχει το δικό σας λογότυπο και στυλ. Δεν είναι εφαρμογή που δείχνει όλα τα
+            κομμωτήρια της περιοχής<br>Υποστηρίζονται τα Android κινητά και σύντομα και τα iPhones.</div>
+        </div>
+        <div class="faqItem closed">
+          <h3 class="color weight-text-h faqItem__question">Πώς γίνεται η ακύρωση ραντεβού</h3>
+          <div class="faqItem__answer">Ο πελάτης από την εφαρμογή μπορεί να ακυρώσει ή να αλλάξει το ραντεβού του μόνος
+            του.<br>Αλλά και εσείς ή οι χρήστες σας μπορούν να κάνουν ακυρώσεις και αλλαγές.</div>
+        </div>
+        <div class="faqItem closed">
+          <h3 class="color weight-text-h faqItem__question">Ποιοί είναι οι περιορισμοί</h3>
+          <div class="faqItem__answer">Μπορείτε να καταχωρήσετε μόνοι σας απεριόριστους χρήστες, κουρείς, προϊόντα,
+            ωράρια, δεν υπάρχει περιορισμός.</div>
+        </div>
+        <div class="faqItem closed">
+          <h3 class="color weight-text-h faqItem__question">Τι εξοπλισμό χρειάζομαι</h3>
+          <div class="faqItem__answer">Η διαχείρηση μπορεί να γίνει είτε από το Android κινητό σας είτε από ένα laptop
+            με έναν πρόσφατο browser.</div>
+        </div>
+        <div class="faqItem closed">
+          <h3 class="color weight-text-h faqItem__question">Τα ακυρωμένα ραντεβού χρεώνονται</h3>
+          <div class="faqItem__answer">Ναι, τα ακυρωμένα ραντεβού χρεώνονται. Για την αποφυγή όμως υπέρογκων χρεώσεων
+            εφαρμόζουμε ένα μέγιστο ποσό € 35 ανά μήνα που θα χρεωθείτε ανά κουρέα.</div>
+        </div>
+        <div class="faqItem closed">
+          <h3 class="color weight-text-h faqItem__question">Υπάρχει ελάχιστη συνδρομή</h3>
+          <div class="faqItem__answer">Όχι, αν δεν σας αρέσει η υπηρεσία μας, μας ενημερώνετε και ακυρώνουμε άμεσα την
+            συνδρομή σας. Αν δεν το κάνετε, υπάρχει μια ελάχιστη τυπική συμμετοχή € 5 το μήνα.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer id="footer" class="section section--footer section--center"
+    style="background-color:rgba(174,179,191,1);padding-bottom:15px;padding-top:15px;--pdx-min-height:0px;--wr-max:1200px">
+    <div class="wr">
+      <div class="footer footer--simple">
+        <div class="footer__primary">
+          <!-- <div id="languagePicker">
+            <ul class="options" style="background-color:rgb(255, 255, 255);color:#222">
+              <li class="option" data-lang="el">Greek</li>
+              <li class="triangle" style="border-top-color:rgb(255, 255, 255)"></li>
+            </ul>
+            <div id="activeLanguage"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+                <path fill="currentColor"
+                  d="M12.235,9.244,11.964,9.1a.5.5,0,0,1-.267-.385l-.092-.782a.75.75,0,0,0-.482-.615L9.92,6.87a.5.5,0,0,1-.289-.285L9.1,5.231a.618.618,0,0,1-.039-.146A.637.637,0,0,1,9.6,4.367l.928-.128a.755.755,0,0,0,.509-.308l.428-.6A5.72,5.72,0,0,0,7,1.19H6.908l.2,1.088a.5.5,0,0,1-.4.584.526.526,0,0,1-.168,0,.67.67,0,0,0-.76.408l-.256.711a.5.5,0,0,1-.613.31l-.464-.138a.537.537,0,0,0-.4.028.763.763,0,0,0-.318,1.082l.511.84a.754.754,0,0,0,.641.36h.94a.492.492,0,0,1,.226.054L7,7a.5.5,0,0,1,.27.383l.028.219a.69.69,0,0,0,.3.487l.534.357a.636.636,0,0,1,.176.882.618.618,0,0,1-.072.09l-.765.79a.742.742,0,0,0-.185.327l-.567,2.1h0A5.728,5.728,0,0,0,12.235,9.244ZM4.359,12.083l.062-.506a.958.958,0,0,0-.164-.661L3.325,9.574a.579.579,0,0,1,.069-.743.371.371,0,0,0,0-.525.382.382,0,0,0-.078-.061L1.273,7.063A5.727,5.727,0,0,0,4.359,12.083ZM7,14a7,7,0,1,1,7-7A7,7,0,0,1,7,14Z">
+                </path>
+              </svg><span>English</span></div>
+          </div> -->
+          <span>© 2021 Yasimera</span>
+        </div>
+        <nav class="footer__linkRow"><a href="#features">Δυνατότητες</a><a href="#pricing">Κόστος</a><a
+            href="#faq">Συχνές ερωτήσεις</a><a href="#"></a></nav>
+      </div>
+    </div>
+  </footer>
+  <!-- <script>; (function () {
+        const setLanguageCookie = function (value) {
+          const name = 'lang'
+          const daysUntilExpiry = 365
+
+          let d = new Date()
+          d.setTime(d.getTime() + daysUntilExpiry * 24 * 60 * 60 * 1000)
+          const expires = 'expires=' + d.toUTCString()
+          document.cookie = name + '=' + value + ';' + expires + ';path=/'
+        }
+
+        const picker = document.getElementById('languagePicker')
+        if (!picker) {
+          return
+        }
+
+        const options = picker.getElementsByClassName('option')
+        if (!options) {
+          return
+        }
+
+        picker.addEventListener('click', function (e) {
+          e.stopPropagation()
+        })
+
+        Array.from(options).forEach(item => {
+          item.addEventListener('click', event => {
+            setLanguageCookie(event.target.dataset.lang)
+            window.location.reload()
+          })
+        })
+
+        document.getElementById('activeLanguage').addEventListener('click', function (e) {
+          e.stopPropagation()
+          picker.classList.add('open')
+        })
+
+        document.addEventListener('click', function () {
+          picker.classList.remove('open')
+        })
+      })()
+  </script> -->
+  <script>!function () { function e() { window.innerWidth < s + h + 60 + (l ? 60 : 40) + 10 ? d.classList.add("header--withDrawer") : d.classList.remove("header--withDrawer") } function t() { d.classList.toggle("header--drawerOpen") } var d = document.getElementById("header"), n = document.getElementById("headerMenuButton"), r = (document.getElementById("headerDrawer"), document.getElementById("headerDrawerBackdrop")), a = document.getElementById("headerLogo"), o = document.getElementById("headerNav"), c = document.querySelector("#headerNav .headerNav__links"), i = document.querySelector("#headerNav .header__navCtas"), s = a ? a.offsetWidth : 0, h = (c ? c.offsetWidth : 0) + (i ? i.offsetWidth : 0), l = o.classList.contains("logoCenter"); n && (n.onclick = t), r && (r.onclick = t), window.addEventListener("resize", e), e() }()</script>
+  <script>!function (e, t) { "function" == typeof define && define.amd ? define([], function () { return t(e) }) : "object" == typeof exports ? module.exports = t(e) : e.SmoothScroll = t(e) }("undefined" != typeof global ? global : "undefined" != typeof window ? window : this, function (I) { "use strict"; function C() { for (var n = {}, e = 0; e < arguments.length; e++)!function (e) { for (var t in e) e.hasOwnProperty(t) && (n[t] = e[t]) }(arguments[e]); return n } function c(t) { var n; try { n = decodeURIComponent(t) } catch (e) { n = t } return n } function s(e) { "#" === e.charAt(0) && (e = e.substr(1)); for (var t, n, o = String(e), r = o.length, a = -1, i = "", c = o.charCodeAt(0); ++a < r;) { if (0 === (t = o.charCodeAt(a))) throw new InvalidCharacterError("Invalid character: the input contains U+0000."); i += 1 <= t && t <= 31 || 127 == t || 0 === a && 48 <= t && t <= 57 || 1 === a && 48 <= t && t <= 57 && 45 === c ? "\\" + t.toString(16) + " " : 128 <= t || 45 === t || 95 === t || 48 <= t && t <= 57 || 65 <= t && t <= 90 || 97 <= t && t <= 122 ? o.charAt(a) : "\\" + o.charAt(a) } try { n = decodeURIComponent("#" + i) } catch (e) { n = "#" + i } return n } function w() { return Math.max(document.body.scrollHeight, document.documentElement.scrollHeight, document.body.offsetHeight, document.documentElement.offsetHeight, document.body.clientHeight, document.documentElement.clientHeight) } function L(e) { return e ? (t = e, parseInt(I.getComputedStyle(t).height, 10) + e.offsetTop) : 0; var t } function A(e, t, n, o) { var r; t.emitEvents && "function" == typeof I.CustomEvent && (r = new CustomEvent(e, { bubbles: !0, detail: { anchor: n, toggle: o } }), document.dispatchEvent(r)) } var H = { ignore: "[data-scroll-ignore]", header: null, topOnEmptyHash: !0, speed: 500, clip: !0, offset: 0, easing: "easeInOutCubic", customEasing: null, updateURL: !0, popstate: !0, emitEvents: !0 }; return function (o, e) { var v, r, S, E, t, b, O = { cancelScroll: function (e) { cancelAnimationFrame(b), b = null, e || A("scrollCancel", v) } }; O.animateScroll = function (i, c, e) { var s, u, r, a, l, d, m, f, h, p, t, n, g = C(v || H, e || {}), y = "[object Number]" === Object.prototype.toString.call(i), o = y || !i.tagName ? null : i; (y || o) && (s = I.pageYOffset, g.header && !S && (S = document.querySelector(g.header)), E = E || L(S), l = y ? i : function (e, t, n, o) { var r = 0; if (e.offsetParent) for (; r += e.offsetTop, e = e.offsetParent;); return r = Math.max(r - t - n, 0), o && (r = Math.min(r, w() - I.innerHeight)), r }(o, E, parseInt("function" == typeof g.offset ? g.offset(i, c) : g.offset, 10), g.clip), d = l - s, m = w(), h = function (e, t) { var n, o, r, a = I.pageYOffset; if (e == t || a == t || (s < t && I.innerHeight + a) >= m) return O.cancelScroll(!0), o = t, r = y, 0 === (n = i) && document.body.focus(), r || (n.focus(), document.activeElement !== n && (n.setAttribute("tabindex", "-1"), n.focus(), n.style.outline = "none"), I.scrollTo(0, o)), A("scrollStop", g, i, c), !(b = u = null) }, p = function (e) { var t, n, o; r = (f += e - (u = u || e)) / parseInt(g.speed, 10), a = s + d * (n = r = 1 < r ? 1 : r, "easeInQuad" === (t = g).easing && (o = n * n), "easeOutQuad" === t.easing && (o = n * (2 - n)), "easeInOutQuad" === t.easing && (o = n < .5 ? 2 * n * n : (4 - 2 * n) * n - 1), "easeInCubic" === t.easing && (o = n * n * n), "easeOutCubic" === t.easing && (o = --n * n * n + 1), "easeInOutCubic" === t.easing && (o = n < .5 ? 4 * n * n * n : (n - 1) * (2 * n - 2) * (2 * n - 2) + 1), "easeInQuart" === t.easing && (o = n * n * n * n), "easeOutQuart" === t.easing && (o = 1 - --n * n * n * n), "easeInOutQuart" === t.easing && (o = n < .5 ? 8 * n * n * n * n : 1 - 8 * --n * n * n * n), "easeInQuint" === t.easing && (o = n * n * n * n * n), "easeOutQuint" === t.easing && (o = 1 + --n * n * n * n * n), "easeInOutQuint" === t.easing && (o = n < .5 ? 16 * n * n * n * n * n : 1 + 16 * --n * n * n * n * n), t.customEasing && (o = t.customEasing(n)), o || n), I.scrollTo(0, Math.floor(a)), h(a, l) || (b = I.requestAnimationFrame(p), u = e) }, (f = 0) === I.pageYOffset && I.scrollTo(0, 0), t = i, n = g, y || history.pushState && n.updateURL && history.pushState({ smoothScroll: JSON.stringify(n), anchor: t.id }, document.title, t === document.documentElement ? "#top" : "#" + t.id), A("scrollStart", g, i, c), O.cancelScroll(!0), I.requestAnimationFrame(p)) }; function n(e) { var t, n; !("matchMedia" in I && I.matchMedia("(prefers-reduced-motion)").matches || 0 !== e.button || e.metaKey || e.ctrlKey) && "closest" in e.target && (r = e.target.closest(o)) && "a" === r.tagName.toLowerCase() && !e.target.closest(v.ignore) && r.hostname === I.location.hostname && r.pathname === I.location.pathname && /#/.test(r.href) && (t = s(c(r.hash)), (n = (n = v.topOnEmptyHash && "#" === t ? document.documentElement : document.querySelector(t)) || "#top" !== t ? n : document.documentElement) && (e.preventDefault(), O.animateScroll(n, r))) } function a(e) { var t; null !== history.state && history.state.smoothScroll && history.state.smoothScroll === JSON.stringify(v) && history.state.anchor && ((t = document.querySelector(s(c(history.state.anchor)))) && O.animateScroll(t, null, { updateURL: !1 })) } function i(e) { t = t || setTimeout(function () { t = null, E = L(S) }, 66) } return O.destroy = function () { v && (document.removeEventListener("click", n, !1), I.removeEventListener("resize", i, !1), I.removeEventListener("popstate", a, !1), O.cancelScroll(), b = t = E = S = r = v = null) }, O.init = function (e) { if (!("querySelector" in document && "addEventListener" in I && "requestAnimationFrame" in I && "closest" in I.Element.prototype)) throw "Smooth Scroll: This browser does not support the required JavaScript methods and browser APIs."; O.destroy(), v = C(H, e || {}), S = v.header ? document.querySelector(v.header) : null, E = L(S), document.addEventListener("click", n, !1), S && I.addEventListener("resize", i, !1), v.updateURL && v.popstate && I.addEventListener("popstate", a, !1) }, O.init(e), O } })</script>
+  <!-- <script data-version="1.5.47">!function () { var e = 0; document.getElementsByClassName("header--fixed").length && (e = document.getElementsByClassName("header--fixed")[0].clientHeight), new window.SmoothScroll('a[href*="#"]', { offset: e }) }(), function () { var e = document.querySelectorAll("a"); Array.prototype.forEach.call(e, function (e, t) { e.addEventListener("click", function (e) { var t = JSON.stringify({ siteId: "g03qxlgfrf7c", category: "button", name: e.target.innerText, data: { url: e.target.href } }); navigator.sendBeacon && navigator.sendBeacon("/api/event", t) }) }); var t = new XMLHttpRequest; t.open("POST", "/api/view", !0), t.setRequestHeader("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8"), t.send(JSON.stringify({ referrer: document.referrer, path: window.location.pathname })) }()</script> -->
+</body>
+
+</html>
