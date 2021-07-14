@@ -1119,19 +1119,13 @@
               isSubmitting = false
 
               if (this.status >= 200 && this.status < 400) {
-                // success handling
-                var res = JSON.parse(request.responseText)
-
-                if (res.success) {
-                  clearData()
-                  $btn.classList.add('btn--success')
-                  setTimeout(function () {
-                    $btn.classList.remove('btn--success')
-                  }, 2000)
-                  handleAction(data)
-                } else if (res.captcha) {
-                  showCaptcha(res)
-                }
+                // success handling                
+                clearData()
+                $btn.classList.add('btn--success')
+                setTimeout(function () {
+                  $btn.classList.remove('btn--success')
+                }, 2000)
+                handleAction(data)
               } else {
                 console.log('error')
                 showError(['There was an error submitting the form.'])
