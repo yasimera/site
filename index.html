@@ -1128,13 +1128,13 @@
                 handleAction(data)
               } else {
                 console.log('error')
-                showError(['There was an error submitting the form.'])
+                showError(['Άγνωστο σφάλμα. Παρακαλώ δοκιμάστε αργότερα'])
               }
             }
 
             request.onerror = function () {
               $btn.classList.remove('btn--loading')
-              showError(['A network error occured. Please make sure you are connected to the internet.'])
+              showError(['Πρόβλημα δικτύου. Παρακαλώ σιγουρευτείτε ότι είστε συνδεδεμένοι στο internet.'])
             }
           }
 
@@ -1174,12 +1174,12 @@
               $field.classList.remove('error') // always remove because it will be checked again
 
               if (value && $field.getAttribute('data-field') === 'email' && !emailRegex.test(value)) {
-                err.push('Invalid email: ' + $field.getAttribute('data-label'))
+                err.push('Μη έγκυρο email: ' + $field.getAttribute('data-label'))
                 $field.classList.add('error')
               }
 
               if (isRequired && (!value || (Array.isArray(value) && !value.length))) {
-                err.push('Missing required field: ' + $field.getAttribute('data-label'))
+                err.push('Λείπει το υποχρεωτικό πεδίο: ' + $field.getAttribute('data-label'))
                 $field.classList.add('error')
               }
 
