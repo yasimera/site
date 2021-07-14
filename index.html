@@ -140,6 +140,12 @@
   <script async="" src="js" data-cs-category="performance"></script>
   <script async=""
     data-cs-category="performance">function gtag() { dataLayer.push(arguments) } window.dataLayer = window.dataLayer || [], gtag("js", new Date), gtag("config", "G-F8NF93S3YF")</script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <style>
+    .g-recaptcha {
+      padding-top: 20px;
+    }
+  </style>
 </head>
 
 <body>
@@ -899,24 +905,24 @@
           data-siteid="yejzvimmpvlw" data-formid="form_TwLKQqgsLdpcHFqz" data-action="{&quot;action&quot;:null}">
           <div class="formRow">
             <div class="cf-field" data-label="Το όνομά σας" data-required="true" data-field="text"><label>Το όνομά
-                σας<span style="color:darkred"> *</span></label><input type="text" placeholder="John"></div>
+                σας<span style="color:darkred"> *</span></label><input name="name" type="text" placeholder="John"></div>
           </div>
           <div class="formRow">
             <div class="cf-field" data-label="Email" data-required="true" data-field="email"><label>Email<span
-                  style="color:darkred"> *</span></label><input type="email" placeholder="your@email.com"></div>
+                  style="color:darkred"> *</span></label><input name="email" type="email" placeholder="your@email.com"></div>
           </div>
           <div class="formRow">
             <div class="cf-field" data-label="ΑΦΜ επιχείρησης" data-required="true" data-field="text"><label>ΑΦΜ
-                επιχείρησης<span style="color:darkred"> *</span></label><input type="text" placeholder="12345678"></div>
+                επιχείρησης<span style="color:darkred"> *</span></label><input name="business_taxid" type="text" placeholder="12345678"></div>
           </div>
           <div class="formRow">
             <div class="cf-field" data-label="Όνομα επιχείρησης" data-required="true" data-field="text"><label>Όνομα
-                επιχείρησης<span style="color:darkred"> *</span></label><input type="text" placeholder="Rusty cut">
+                επιχείρησης<span style="color:darkred"> *</span></label><input name="business_name" type="text" placeholder="Rusty cut">
             </div>
           </div>
           <div class="formRow">
             <div class="cf-field" data-label="Διεύθυνση επιχείρησης" data-required="true" data-field="text">
-              <label>Διεύθυνση επιχείρησης<span style="color:darkred"> *</span></label><input type="text"></div>
+              <label>Διεύθυνση επιχείρησης<span style="color:darkred"> *</span></label><input name="business_address" type="text"></div>
           </div>
           <div id="formCaptcha_ffqeh9bn506" class="formCaptcha">
             <div class="formRow">
@@ -941,6 +947,7 @@
             </div>
           </div><button id="cf-cta-ffqeh9bn506" class="btn btn--b btn--primary btn--large"
             style="color:rgba(55,63,83,1);background-color:#fff">Με ενδιαφέρει</button>
+          <div class="g-recaptcha" data-sitekey="6Ld88ZUbAAAAAN7n4yqKaGGdwdecnPPw1W3kGZUX"></div>
         </form>
       </div>
     </div>
@@ -965,20 +972,6 @@
           function bindForm() {
             $form.addEventListener('submit', handleSubmit)
             $btn.addEventListener('click', handleSubmit)
-
-            bindUploadFields()
-          }
-
-          function bindUploadFields() {
-            Array.prototype.forEach.call($fileUploadFields, function ($field) {
-              let button = $field.querySelector('button')
-              let input = $field.querySelector('input')
-
-              if (button && input) {
-                button.addEventListener('click', e => handleUploadClick(e, input))
-                input.addEventListener('change', handleUploadChange)
-              }
-            })
           }
 
           function getRadioValue(el) {
@@ -1035,81 +1028,6 @@
             }
           }
 
-          function handleUploadClick(e, input) {
-            e.preventDefault()
-            input.click()
-          }
-
-          function handleUploadChange(e) {
-            e.preventDefault()
-
-            let target = e.target
-
-            if (!target.files || target.files.length === 0) {
-              console.error('no files selected')
-              return
-            }
-
-            // we only support one file per field
-            let file = target.files[0]
-
-            const preData = {
-              contentType: file.type,
-              contentLength: file.size
-            }
-
-            let request = new XMLHttpRequest()
-            let formId = $form.getAttribute('data-formid')
-
-            request.open('POST', window.location.origin + '/api/forms/' + formId + '/file-upload-url', true)
-            request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8')
-            request.send(JSON.stringify(preData))
-
-            request.onload = function () {
-              let res = JSON.parse(request.responseText)
-              if (this.status >= 200 && this.status < 400) {
-                clearErrorMessage()
-                uploadFile(target, file, res.fileId, res.url)
-              } else {
-                clearFileField(target.parentElement)
-                showError(['File issue: ' + res.error])
-                console.log(JSON.stringify(JSON.parse(request.responseText)))
-              }
-            }
-          }
-
-          // uploadFile uses the presigned url generated by API to upload to S3
-          // el is the HTML element that is used to display the file name if upload was successful
-          function uploadFile(el, file, fileId, url) {
-            let uploadFileReq = new XMLHttpRequest()
-            uploadFileReq.open('PUT', url, true)
-            uploadFileReq.send(file)
-
-            // flag that there is a file being uploaded
-            uploadCounter++
-
-            uploadFileReq.onload = function () {
-              if (this.status >= 200 && this.status < 400) {
-                el.parentElement.setAttribute(dataFileName, file.name)
-                el.parentElement.setAttribute(dataFileId, fileId)
-                el.parentElement.querySelector('span').innerHTML = file.name
-                clearErrorMessage()
-              } else {
-                showError(['There was an error when uploading your file'])
-                clearFileField(el.parentElement)
-                console.log(JSON.stringify(JSON.parse(uploadFileReq.responseText)))
-              }
-
-              // decrease counter if file is uploaded
-              uploadCounter--
-
-              if (uploadCounter === 0 && submitAfterUpload) {
-                submitAfterUpload = false
-                handleSubmit()
-              }
-            }
-          }
-
           function handleSubmit(e) {
             // when the submit function is triggered by a button, we need to prevent the default action.
             // However we might also trigger this function after file uploads complete, in which case we won't have an e (event) to prevent
@@ -1122,32 +1040,7 @@
               return
             }
 
-            var fieldSet = {}
-
-            Array.prototype.forEach.call($fields, function ($field, i) {
-              var value = getValue($field)
-              var name = $field.getAttribute('data-label')
-              let type = $field.getAttribute('data-field')
-
-              if (type === 'file') {
-                let fileField = $field.querySelector('.cf-file-field')
-                let fileName = fileField.getAttribute(dataFileName)
-                let fileId = fileField.getAttribute(dataFileId)
-
-                fieldSet[name] = { type: 'file', fileName: fileName, fileId: fileId }
-              } else {
-                fieldSet[name] = value
-              }
-            })
-
-            var data = {
-              path: window.location.pathname,
-              formId: $form.getAttribute('data-formid'),
-              siteId: $form.getAttribute('data-siteid'),
-              cs: $captchaSolution.value,
-              cid: $captchaSolution.getAttribute('data-cid'),
-              data: fieldSet
-            }
+            var data = new FormData(document.getElementById($form.id));
 
             $btn.classList.add('btn--loading')
 
@@ -1215,9 +1108,9 @@
             isSubmitting = true
 
             var request = new XMLHttpRequest()
-            request.open('POST', window.location.origin + '/api/submit-form', true)
-            request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8')
-            request.send(JSON.stringify(data))
+            request.open('POST', 'https://formspree.io/f/mknkvrkq', true)
+            request.setRequestHeader('Accept', 'application/json')
+            request.send(data)
 
             request.onload = function () {
               $btn.classList.remove('btn--loading')
@@ -1236,13 +1129,12 @@
                     $btn.classList.remove('btn--success')
                   }, 2000)
                   handleAction(data)
-                  sendEvent(data.siteId)
-                  callCustomCode(data)
                 } else if (res.captcha) {
                   showCaptcha(res)
                 }
               } else {
                 console.log('error')
+                showError(['There was an error submitting the form.'])
               }
             }
 
@@ -1250,22 +1142,6 @@
               $btn.classList.remove('btn--loading')
               showError(['A network error occured. Please make sure you are connected to the internet.'])
             }
-          }
-
-          function sendEvent(siteId) {
-            var request = new XMLHttpRequest()
-            request.open('POST', '/api/event', true)
-            request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8')
-            request.send(
-              JSON.stringify({
-                siteId: siteId,
-                category: 'customForm',
-                name: 'Custom Form Submission',
-                data: {
-                  page: window.location.pathname
-                }
-              })
-            )
           }
 
           function clearData() {
@@ -1331,11 +1207,6 @@
             return Array.isArray(err) && err.length === 0
           }
           bindForm()
-
-          // this function at the very end in case of invalid code
-          function callCustomCode(data) {
-            // custom_code_placeholder
-          }
         })()
     </script>
   </div>
