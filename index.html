@@ -165,6 +165,93 @@
   src="https://www.facebook.com/tr?id=2919997708317138&ev=PageView&noscript=1"
   /></noscript>
   <!-- End Facebook Pixel Code -->
+  <script src="cookieconsent.min.js"></script>
+    <script>
+        window.CookieConsent.init({
+          language: {
+            current: 'el',
+            locale: {
+              el: {
+                barMainText: 'Η ιστοσελίδα χρησιμοποιεί cookies για σας παρέχει την καλύτερη εμπειρία.',
+                barLinkSetting: 'Ρυθμίσεις',
+                barBtnAcceptAll: 'Αποδοχή όλων των cookies',
+                modalMainTitle: 'Ρυθμίσεις',
+                modalMainText: 'Τα cookies είναι μικρά δεδομένα που στέλνονται από μία ιστοσελίδα και αποθηκεύονται στον υπολογιστή σας από τον browser σας. Ο browser σας αποθηκεύει κάθε πληροφορία σε ένα μικρό αρχείο, που ονομάζεται cookie. Όταν πατήσετε σε μια άλλη σελίδα, ο browser σας στέλνει το cookie στον server. Τα cookies σχεδιάστηκαν να είναι ένας αξιόπιστος μηχανισμός για τα μπορούν τα sites να θυμούνται πληροφορίες ή να καταγράφουν τις δραστηριότητες των χρηστών στον browser.',
+                modalBtnSave: 'Αποθήκευση',
+                modalBtnAcceptAll: 'Αποδοχή όλων και κλείσιμο',
+                modalAffectedSolutions: 'Υπηρεσίες που επιρρεάζονται:',
+                learnMore: 'Περισσότερα',
+                on: 'Ναι',
+                off: 'Όχι',
+              }
+            }
+          },
+          categories: {
+            necessary: {
+              needed: true,
+              wanted: true,
+              checked: true,
+              language: {
+                locale: {
+                  el: {
+                    name: 'Απαραίτητα cookies',
+                    description: 'Cookies που απαιτούνται για την σωστή λειτουργία της ιστοσελίδας.',
+                  }
+                }
+              }
+            },
+            various: {
+              needed: false,
+              wanted: false,
+              checked: false,
+              language: {
+                locale: {
+                  el: {
+                    name: 'Προαιρετικά cookies',
+                    description: 'Cookies που χρησιμοποιούνται για την βελτίωση της εμπειρίας της ιστοσελίδας.',
+                  },
+                }
+              }
+            }
+          },
+          services: {
+            facebook: {
+              category: 'various',
+              type: 'dynamic-script',
+              search: 'facebook',
+              language: {
+                locale: {
+                  el: {
+                    name: 'Facebook Analytics'
+                  },
+                }
+              }
+            },
+            goolge: {
+              category: 'various',
+              type: 'dynamic-script',
+              search: 'analytics',
+              cookies: [
+                {
+                  name: '_gid',
+                  domain: `.${window.location.hostname}`
+                },
+                {
+                  name: /^_ga/,
+                  domain: `.${window.location.hostname}`
+                }
+              ],
+              language: {
+                locale: {
+                  el: {
+                    name: 'Google Analytics'
+                  },
+                }
+              }
+            }
+          }
+        });
+      </script>
 </head>
 
 <body>
